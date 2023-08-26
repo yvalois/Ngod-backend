@@ -54,10 +54,10 @@ const getProductsByCategory = async (req, res) => {
 
 const createProduct = async (req, res) => {
   try{
-    const {name, price, description,countInStock,category, imageToCharge, subcategory, discount} = req.body.formData;
+    const {name, price, description,countInStock, category, imageToCharge,  discount} = req.body.formData;
     const storeId = req.user.storeId;
     const cloudinaryUpload = await cloudinary.uploader.upload(imageToCharge, {
-      folder: storeId,
+      folder: "productos",
       width: 500,
       crop: "scale"
     });
@@ -65,19 +65,18 @@ const createProduct = async (req, res) => {
       name,
       price,
       description,
-      categorieId:category,
+      categorieId: category,
       imageUrl: {
         url: cloudinaryUpload.url,
         public_id: cloudinaryUpload.public_id
       },
       storeId,
       countInStock,
-      subCategoryId: subcategory,
       discount
     });
     await product.save();
     console.log("product create");
-    const products = await Product.find({storeId: req.user.storeId}).populate("categorieId").populate("subCategoryId");
+    const products = await Product.find({storeId: req.user.storeId}).populate("categorieId")
     return res.status(200).json(products);
   }catch(error){
     console.error(error);

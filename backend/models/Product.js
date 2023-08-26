@@ -40,11 +40,6 @@ const productSchema = mongoose.Schema({
   discount: {
     type: Number,
     default: 0,
-  },
-  subCategoryId: {
-    type: mongoose.Types.ObjectId,
-    ref: "subcategory",
-    required: true,
   }
 },
 {

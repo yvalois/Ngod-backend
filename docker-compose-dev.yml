@@ -14,9 +14,9 @@ services:
       - .env
     environment: 
       - MONGO_URI=mongodb://admin:passStore123.@e-comerce-backend-storedb-1:27017/store?authSource=admin
-      - CLOUDINARY_NAME=dydvp6kk1
-      - CLOUDINARY_KEY=319988932679623 
-      - CLOUDINARY_SECRET=j-Gwtjk0jPwvlmElqovh4EgadaQ
+      - CLOUDINARY_NAME=df3ruab6a
+      - CLOUDINARY_KEY=217825423969543 
+      - CLOUDINARY_SECRET=BHkBHpHRrvn0uMuvfPkMtCU2SJY
       - OPCO_HOST=vps-2585605-x.dattaweb.com
       - OPCO_USER=no-reply@opencoffee.io
       - OPCO_PASSWORD=EUtYO1Wu6K 

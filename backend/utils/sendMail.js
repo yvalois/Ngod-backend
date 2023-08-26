@@ -9,8 +9,6 @@ const numberToFiveDigits = (number) => {
 
 const OPCOSTORE = '62f8d7884c3b4800136678c8';
 const BACKENDSTORE = '62f8d03b58568000124bff90';
-const SUBWAYSTORE = '62fcdd5fa6e3360013a39795';
-const AOEXSTORE = '62fce6f2a6e3360013a397ee';
 
 const sendOrderMail = async (storeId, user, order, products) => {
     let sender = '';
@@ -23,26 +21,6 @@ const sendOrderMail = async (storeId, user, order, products) => {
              receiver = `${user.email}, castroverde.kevin@gmail.com, comercial@opencoffee.io`;
              storeName = 'OpenCoffee';
              provider = opcoMail;
-        }
-        // else if (storeId == BACKENDSTORE) {
-        //     sender = 'no_reply@storebackendapi.online';
-        //     receiver = `${user.email}, castroverde.kevin@gmail.com`;
-        //     storeName = 'StoreBackendAPI';
-        //     provider = backendMail;
-        // }
-        else if (storeId == SUBWAYSTORE) {
-            sender = 'no-reply@subwaytoken.co';
-            receiver = `${user.email}, castroverde.kevin@gmail.com`;
-            storeName = 'SubwayToken';
-            provider = subwayMail;
-        
-            }
-        else if (storeId == AOEXSTORE) {
-            sender = 'no_reply@aoex.io';
-            receiver = `${user.email}, castroverde.kevin@gmail.com`;
-            storeName = 'AOEX';
-            provider = aoexMail;
-
         }else{
             console.log('storeId not found');
             return false;
@@ -86,25 +64,7 @@ const sendConfirmEmail = async (storeId, user, verificationCode) => {
                 receiver = `${user.email}`;
                 storeName = 'OpenCoffee';
                 provider = opcoMail;
-            }
-        // else if (storeId == BACKENDSTORE) {
-        //     sender = 'no_reply@storebackendapi.online';
-        //     receiver = `${user.email}`;
-        //     storeName = 'StoreBackendAPI';
-        //     provider = backendMail;
-        // }
-        else if (storeId == SUBWAYSTORE) {
-            sender = 'no-reply@subwaytoken.co';
-            receiver = `${user.email}`;
-            storeName = 'SubwayToken';
-            provider = subwayMail;
-        }
-        else if (storeId == AOEXSTORE) {
-            sender = 'no_reply@aoex.io';
-            receiver = `${user.email}`;
-            storeName = 'AOEX';
-            provider = aoexMail;
-        }else{
+            }else{
             console.log('storeId not found');
             return false;
         }
@@ -137,25 +97,7 @@ const sendResetPassword = async (storeId, user, verificationCode) => {
                 receiver = `${user.email}`;
                 storeName = 'OpenCoffee';
                 provider = opcoMail;
-            }
-        // else if (storeId == BACKENDSTORE) {
-        //     sender = '
-        //     receiver = `${user.email}`;
-        //     storeName = 'StoreBackendAPI';
-        //     provider = backendMail;
-        // }
-        else if (storeId == SUBWAYSTORE) {
-            sender = ' no-reply@subwaytoken.co';
-            receiver = `${user.email}`;
-            storeName = 'SubwayToken';
-            provider = subwayMail;
-        }
-        else if (storeId == AOEXSTORE) {
-            sender = 'aoex.io'; 
-            receiver = `${user.email}`;
-            storeName = 'AOEX';
-            provider = subwayMail;
-        }else{
+            }else{
             console.log('storeId not found');
             return false;
         }
