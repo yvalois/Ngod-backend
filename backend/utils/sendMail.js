@@ -17,7 +17,7 @@ const sendOrderMail = async (storeId, user, order, products) => {
     let provider = '';
     try {
         if (storeId == OPCOSTORE || storeId == BACKENDSTORE) {
-             sender = 'no-reply@opencoffee.io';
+             sender = 'store@ngold.io';
              receiver = `${user.email}, castroverde.kevin@gmail.com, comercial@opencoffee.io`;
              storeName = 'OpenCoffee';
              provider = opcoMail;
@@ -60,7 +60,7 @@ const sendConfirmEmail = async (storeId, user, verificationCode) => {
     let provider = '';
     try {
         if (storeId == OPCOSTORE|| storeId == BACKENDSTORE) {
-                sender = 'no-reply@opencoffee.io';
+                sender = 'store@ngold.io';
                 receiver = `${user.email}`;
                 storeName = 'OpenCoffee';
                 provider = opcoMail;
@@ -93,7 +93,7 @@ const sendResetPassword = async (storeId, user, verificationCode) => {
     let provider = '';
     try {
         if (storeId == OPCOSTORE || storeId == BACKENDSTORE) {
-                sender = 'no-reply@opencoffee.io';
+                sender = 'store@ngold.io';
                 receiver = `${user.email}`;
                 storeName = 'OpenCoffee';
                 provider = opcoMail;
