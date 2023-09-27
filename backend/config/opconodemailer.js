@@ -6,9 +6,9 @@ const pass = process.env.REACT_APP_OPCO_PASSWORD;
 
 
 const opcoMail = nodemailer.createTransport({
-    service: "Gmail",
-    // port: 587,
-    // secure: true,
+    host: host,
+    port: 587,
+    secure: true,
     auth: {
         user: user,
         pass: pass
