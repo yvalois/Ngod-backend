@@ -9,7 +9,7 @@ const opcoMail = nodemailer.createTransport({
     // host: host,
     // port: 465,
     // secure: false,
-    servide:"Gmail",
+    service:"Gmail",
     auth: {
         user: user,
         pass: pass
