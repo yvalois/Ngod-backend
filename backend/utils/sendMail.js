@@ -81,7 +81,6 @@ const sendConfirmEmail = async (storeId, user, verificationCode) => {
         })
         
     } catch (error) {
-        console.log("here")
         console.log(error);
     }
 }
