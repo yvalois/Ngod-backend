@@ -19,7 +19,7 @@ const sendOrderMail = async (storeId, user, order, products) => {
         if (storeId == OPCOSTORE || storeId == BACKENDSTORE) {
              sender = 'store@ngold.io';
              receiver = `${user.email}, castroverde.kevin@gmail.com, comercial@opencoffee.io`;
-             storeName = 'OpenCoffee';
+             storeName = 'NGOLD';
              provider = opcoMail;
         }else{
             console.log('storeId not found');
@@ -62,7 +62,7 @@ const sendConfirmEmail = async (storeId, user, verificationCode) => {
         if (storeId == OPCOSTORE|| storeId == BACKENDSTORE) {
                 sender = 'store@ngold.io';
                 receiver = `${user.email}`;
-                storeName = 'OpenCoffee';
+                storeName = 'NGOLD';
                 provider = opcoMail;
             }else{
             console.log('storeId not found');
@@ -95,7 +95,7 @@ const sendResetPassword = async (storeId, user, verificationCode) => {
         if (storeId == OPCOSTORE || storeId == BACKENDSTORE) {
                 sender = 'store@ngold.io';
                 receiver = `${user.email}`;
-                storeName = 'OpenCoffee';
+                storeName = 'NGOLD';
                 provider = opcoMail;
             }else{
             console.log('storeId not found');
